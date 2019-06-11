@@ -45,8 +45,9 @@ class MusicLibraryController
   end
 
   def pick_song(num)
+    index = num - 1
     sorted = Song.all.sort.uniq
-    sorted[num+1]
+    sorted[index]
   end
 
   def list_songs_by_artist

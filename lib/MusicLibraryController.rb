@@ -51,7 +51,7 @@ class MusicLibraryController
     match = Artist.all.select {|x|
       x.name == a}
     #binding.pry
-    sorted =  match.songs.sort.uniq
+    sorted =  match.first.songs.sort.uniq
     sorted.each {|x| puts "#{sorted.index(x) + 1}. #{x.artist.name} - #{x.name} - #{x.genre.name}"}
   end
 

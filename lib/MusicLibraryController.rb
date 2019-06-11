@@ -47,6 +47,10 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     a = gets.strip
+    ray = []
+    match = Artist.all.select {|x| x.name == a}
+    sorted =  match.songs.sort.uniq
+    sorted.each {|x| puts "#{sorted.index(x) + 1}. #{x.artist.name} - #{x.name} - #{x.genre.name}"}
   end
 
 

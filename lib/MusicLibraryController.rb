@@ -48,7 +48,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     a = gets.strip
   end
-  
+
 
   def list_artists
     sorted = Artist.all.sort.uniq

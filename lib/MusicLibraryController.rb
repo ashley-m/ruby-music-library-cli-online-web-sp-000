@@ -44,6 +44,12 @@ class MusicLibraryController
     sorted.each {|x| puts "#{sorted.index(x) + 1}. #{x.artist.name} - #{x.name} - #{x.genre.name}"}
   end
 
+  def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    a = gets.strip
+  end
+  
+
   def list_artists
     sorted = Artist.all.sort.uniq
     #binding.pry

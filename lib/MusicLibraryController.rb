@@ -79,10 +79,10 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     s = gets.strip.to_i
     libsize = Song.all.size + 1
-    binding.pry
+    #binding.pry
     if s.is_a?(Integer) && (s < libsize && s > 0)
       song = pick_song(s)
-      binding.pry
+      #binding.pry
       puts "Playing #{song.name} by #{song.artist}"
     end
   end

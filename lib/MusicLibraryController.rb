@@ -65,7 +65,7 @@ class MusicLibraryController
       sorted = match.first.songs.sort.uniq
       sorted.each {|x| puts "#{sorted.index(x) + 1}. #{x.artist.name} - #{x.name}"}
     end
-    
+
   end
 
 

@@ -83,7 +83,7 @@ class MusicLibraryController
     if s.is_a?(Integer) && (s < libsize && s > 0)
       song = pick_song(s)
       #binding.pry
-      puts "Playing #{song.name} by #{song.artist}"
+      puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
 

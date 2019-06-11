@@ -48,12 +48,11 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     a = gets.strip
     ray = []
-    match = Artist.all.select {|x| binding.pry
-      x.name == a}
+    match = Artist.all.select {|x| x.name == a}
     #binding.pry
     if !match.first.nil?
       sorted =  match.first.songs.sort.uniq
-      sorted.each {|x| puts "#{sorted.index(x) + 1}. #{x.artist.name} - #{x.name} - #{x.genre.name}"}
+      sorted.each {|x| puts "#{sorted.index(x) + 1}. #{x.name} - #{x.genre.name}"}
     end
   end
 

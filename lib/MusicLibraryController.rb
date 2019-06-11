@@ -31,7 +31,7 @@ class MusicLibraryController
       elsif cmd == "list artist"
         list_songs_by_artist
       elsif cmd == "list genre"
-        list_genre
+        list_songs_by_genre
       elsif cmd == "play song"
         play_song
       end

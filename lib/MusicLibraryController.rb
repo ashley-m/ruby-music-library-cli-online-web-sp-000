@@ -78,7 +78,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     s = gets.strip
   end
-  
+
   def list_artists
     sorted = Artist.all.sort.uniq
     #binding.pry

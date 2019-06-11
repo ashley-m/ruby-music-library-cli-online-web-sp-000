@@ -48,7 +48,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     a = gets.strip
     ray = []
-    match = Artist.all.select {|x| binding.pry 
+    match = Artist.all.select {|x| binding.pry
       x.name == a}
     #binding.pry
     sorted =  match.songs.sort.uniq

@@ -78,8 +78,10 @@ class MusicLibraryController
     list_songs
     puts "Which song number would you like to play?"
     s = gets.strip
-    song = pick_song(s) if s.is_a?(Integer)
-    puts "Playing #{song.name} by #{song.artist}"
+    if s.is_a?(Integer)
+      song = pick_song(s)
+      puts "Playing #{song.name} by #{song.artist}"
+    end
   end
 
   def list_artists

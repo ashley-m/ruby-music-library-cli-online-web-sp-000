@@ -49,6 +49,7 @@ class MusicLibraryController
     a = gets.strip
     ray = []
     match = Artist.all.select {|x| x.name == a}
+    match.flatten!
     sorted =  match.songs.sort.uniq
     sorted.each {|x| puts "#{sorted.index(x) + 1}. #{x.artist.name} - #{x.name} - #{x.genre.name}"}
   end
